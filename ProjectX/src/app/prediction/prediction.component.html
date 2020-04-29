@@ -1,0 +1,39 @@
+<div class ="content" role="main">
+  <input type="hidden" #selection>
+  <div class="text-center">
+      <div class="row">
+          <div class="form-group">
+              <label for="sel1">Select Asset: </label>
+              <select class="form-control" [(ngModel)] = "asset" id="sel1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select First Asset
+                  <option>    GE    </option>
+                  <option>   AAPL   </option>
+                  <option>   GOOG   </option>
+                  <option>    IBM   </option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label>Start Date: </label>
+              <input type = "date"
+                  class = "form-control"
+                  [(ngModel)] = "startDate"
+                  id = "myInput1"
+                  placeholder="Enter Start Date">
+          </div>
+          <div class="form-group">
+              <label>End Date: </label>
+              <input type = "date"
+                  class = "form-control"
+                  [(ngModel)] = "endDate"
+                  id = "myInput1"
+                  placeholder="Enter End Date">
+          </div>
+      </div>
+    <button class="predictionBtn " (click)="predict()" >Prediction</button>
+    <button class="display" (click)="imageSource = 'http://localhost:5000/forecast';" >Display</button>
+    <button onClick="window.location.reload();">Refresh Page</button> 
+
+  </div>
+  <img [src]="imageSource" *ngIf="imageSource"/>
+  {{ text }} 
+</div>

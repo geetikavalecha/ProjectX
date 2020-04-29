@@ -1,0 +1,50 @@
+<div class="content" role="main">
+    <input type="hidden" #selection>
+    <div class="text-center">
+        <div class="row">
+            <div class="form-group col-xs-6">
+                <label for="sel1">Select Asset: </label>
+                <select class="form-control" [(ngModel)] = "asset1" id="sel1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select First Asset
+                    <option>    GE    </option>
+                    <option>   AAPL   </option>
+                    <option>   GOOG   </option>
+                    <option>    IBM   </option>
+                </select>
+            </div>
+            <div class="form-group col-xs-6">
+                <label for="sel1">Select Asset: </label>
+                <select class="form-control" [(ngModel)] = "asset2" id="sel2" placeholder="Select Second Asset">
+                    <option>    GE    </option>
+                    <option>   AAPL   </option>
+                    <option>   GOOG   </option>
+                    <option>    IBM   </option>
+                </select>
+            </div>
+        
+            <div class="form-group">
+                <label>Start Date: </label>
+                <input type = "date"
+                    class = "form-control"
+                    [(ngModel)] = "startDate"
+                    id = "myInput1"
+                    placeholder="Enter Start Date">
+            </div>
+            
+            <div class="form-group">
+                <label>End Date: </label>
+                <input type = "date"
+                    class = "form-control"
+                    [(ngModel)] = "endDate"
+                    id = "myInput2"
+                    placeholder="Enter End Date">
+            </div>
+        </div>
+      <button class="predictionBtn " (click)="compare();" >Compare</button>
+      <button class="display" (click)="imageSource = 'http://localhost:5000/compare';" >Compare All Assets</button>
+      <button onClick="window.location.reload();">Refresh Page</button> 
+    </div>
+    <img [src]="imageSource" *ngIf="imageSource"/>
+    {{ text }} 
+  
+</div>

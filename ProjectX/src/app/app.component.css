@@ -1,0 +1,156 @@
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #000000;
+    overflow: hidden;
+  }
+  h2{
+    margin: 0px 0;
+  }
+
+.toolbar {
+    left : 0px;
+    display: fixed;
+    overflow: hidden;
+    background-color: #000000;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0px; /* Position the navbar at the top of the page */
+    bottom: 590px;
+    width: 100%; /* Full width */
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+
+.content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 1960px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    position: fixed;/* Set the navbar to fixed position */
+    top: 35px; /* Position the navbar at the top of the page */
+    left: 0px;
+    bottom: 550px;
+    align-items: left;
+    right: 500px;
+    width: 100%;
+}
+.navbar a {
+    float: left;
+    display: block;
+    margin: -5px 0 0 0;
+    top: 45px;
+    bottom: 540px;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+  /* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+    top: 40px;
+    bottom: 540px;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.face.back {
+    display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    background-color: #aaa;
+}
+
+.card-container {
+    position: fixed;
+    top: 150px;
+    right: 20px;
+    align-items: right;
+}
+
+.circle-link {
+    top: 200px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+}
+.circle-link1 {
+    background-image: url(linkedIn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 200px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+}
+.circle-link2 {
+    background-image: url(git.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 200px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+}
+.circle-link:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+svg#clouds {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+}
+
+
+
+
+  
