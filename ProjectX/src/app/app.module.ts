@@ -11,7 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { MonteCarloComponent } from './monte-carlo/monte-carlo.component';
 import { CompareServiceService } from './compare/compare-service.service';
 import { MonteServiceService } from './monte-carlo/monte-service.service';
-
+import { TextInputAutocompleteModule } from 'angular-text-input-autocomplete';
+import { BasicMonteComponent } from './basic-monte/basic-monte.component';
+import { BasicMonteService } from './basic-monte/basic-monte.service';
 
 @NgModule({
   declarations: [
@@ -19,15 +21,18 @@ import { MonteServiceService } from './monte-carlo/monte-service.service';
     routingComponents,
     CompareComponent,
     HomeComponent,
-    MonteCarloComponent
+    MonteCarloComponent,
+    BasicMonteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    TextInputAutocompleteModule,
+    
   ],
-  providers: [ServiceService, CompareServiceService, MonteServiceService],
+  providers: [ServiceService, CompareServiceService, MonteServiceService, BasicMonteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

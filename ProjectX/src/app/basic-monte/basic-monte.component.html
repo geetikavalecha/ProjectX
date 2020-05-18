@@ -1,0 +1,63 @@
+<div class ="content" role="main">
+    <input type="hidden" #selection>
+    <div class="text-center">
+        <div class="row">
+            <div class="form-group">
+                <label for="sel1">Select Asset: </label>
+                <select class="form-control" [(ngModel)] = "asset" id="sel1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <option selected="selected">Select Your Option</option>
+                    <option>    GE    </option>
+                    <option>   AAPL   </option>
+                    <option>   GOOG   </option>
+                    <option>    IBM   </option>
+                    <option>   MSFT    </option>
+                    <option>    ZM   </option>
+                    <option>   UBER   </option>
+                    <option>    SWI   </option>
+                    <option>   WORK   </option>
+                    <option>   CRWD   </option>
+                    <option>    RNG   </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Start Date: </label>
+                <input type = "date"
+                    max= "2020-05-18"
+                    class = "form-control"
+                    [(ngModel)] = "startDate"
+                    id = "myInput1"
+                    placeholder="Enter Start Date">
+            </div>
+            <div class="form-group">
+                <label>End Date: </label>
+                <input type = "date"
+                    max= "2020-05-18"
+                    class = "form-control"
+                    [(ngModel)] = "endDate"
+                    id = "myInput2"
+                    placeholder="Enter End Date">
+            </div>
+            <div class="form-group">
+                <label>No of Days: </label>
+                <input type = "number"
+                    min="100"
+                    pattern="[0-9]*" 
+                    class = "form-control"
+                    [(ngModel)] = "NoOfdays"
+                    id = "myInput3"
+                    placeholder="Enter No of Days">
+            </div>
+        </div>
+      <button class="w3-button" (click)="predict()">Prediction</button>
+      <button class="w3-button" (click)="imageSource1 = 'http://localhost:5000/monte';imageSource2 = 'http://localhost:5000/histo';allText()" >Display</button>
+      <button class="w3-button" onClick="window.location.reload();">Refresh Page</button> 
+  
+    </div>
+    <br>
+    {{text1}}
+    {{result.mean}}
+    <img [src]="imageSource1" *ngIf="imageSource1"/>
+    <br>
+    {{text2}}
+    <img [src]="imageSource2" *ngIf="imageSource2"/>
+  </div>
