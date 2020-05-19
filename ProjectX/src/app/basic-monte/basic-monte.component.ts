@@ -37,7 +37,7 @@ export class BasicMonteComponent implements OnInit {
     return this.service.hit().subscribe(response => this.result1 = response);
   }
   allText() {
-    this.text1 = 'Forecast price for the provided end date: ';
+    this.text1 = 'Forecast Price(Mean): ';
     this.text2 = 'Histogram Interpretation: ';
     }
   

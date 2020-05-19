@@ -46,7 +46,7 @@ export class CompareComponent implements OnInit {
   }
 
   allText() {
-    this.text1 = 'Comparison: ';
+    this.text1 = 'Risk Rate Comparison: ';
     this.text2 = 'Correlation: ';
     }
   

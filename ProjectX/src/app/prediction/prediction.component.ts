@@ -38,7 +38,7 @@ export class PredictionComponent implements OnInit {
     return this.service.hit().subscribe(response => this.result1 = response);
   }
   allText() {
-    this.text1 = 'Forecast price for the provided end date: ';
+    this.text1 = 'Forecast Price: ';
     this.text2 = 'Return Variation: ';
     this.text3 = 'Variation from Average Price: ';
     }

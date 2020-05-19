@@ -41,10 +41,8 @@ export class MonteCarloComponent implements OnInit {
   public startDate: string = '';
   public endDate: string = ''; 
   public NoOfportfolios: number;
-  elements: any;
   
   imageSource;
-  text = '';
   monteCarlo(){
     this.monteservice.asset1 = this.asset1;
     this.monteservice.asset2 = this.asset2;
@@ -62,23 +60,6 @@ export class MonteCarloComponent implements OnInit {
 }
   hitRefresh(){
     return this.monteservice.hit().subscribe(response => this.result1 = response);
-  }
-
-  table(){
-    this.elements = [
-      {position: "MaxRisk" , value: this.result.MaxSharpeRisk},
-      {position: "MaxReturn"},
-      {position: "MaxW1"},
-      {position: "MaxW2"},
-      {position: "MaxW2"},
-      {position: "MaxW2"},
-      {position: "MinRisk"},
-      {position: "MinReturn"},
-      {position: "MinW1"},
-      {position: "MinW2"},
-      {position: "MinW3"},
-      {position: "MinW4"},
-    ];
   }
   
 }
